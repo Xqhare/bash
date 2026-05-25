@@ -6,7 +6,7 @@ set -e
 read -p "Project/Deity Name (e.g., Hera): " NAME
 read -p "Project type (Library [l], Executable [b]): " TYPE
 
-INIT_SCRIPT="$HOME/Adytum/Programming/bash/scripts_by_me/Selfmade/init_gitea_repo.sh"
+INIT_SCRIPT="$HOME/Adytum/Programming/bash/scripts_by_me/init_gitea_repo.sh"
 
 if  [[ $TYPE == l* ]] ; then
 	TEMPLATE_NAME="rust-template-lib"
