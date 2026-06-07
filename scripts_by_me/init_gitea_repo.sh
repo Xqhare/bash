@@ -10,7 +10,7 @@ TEMPLATE_NAME=${2:-rust-template-bin} # default template
 
 TOKEN_FILE="$HOME/Adytum/Documents/tokens/gitea_adm_token.md"
 
-if [ ! -f "$TOKEN_FILE" ]; then
+if [[ ! -f "$TOKEN_FILE" ]]; then
 	echo "Error: $TOKEN_FILE does not exist"
 	exit 1
 fi
