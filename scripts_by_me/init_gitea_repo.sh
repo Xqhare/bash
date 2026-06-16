@@ -18,14 +18,14 @@ fi
 TOKEN=$(cat "$TOKEN_FILE")
 
 # Create repo from template on Gitea
-curl -X POST "https://git.xqhare.net/api/v1/repos/templates/Xqhare/${TEMPLATE_NAME}/generate" \
+curl -X POST "https://git.xqhare.net/api/v1/repos/Xqhare/${TEMPLATE_NAME}/generate" \
  -H "Authorization: token ${TOKEN}" \
  -H "Content-Type: application/json" \
- -d "{\"name\": \"${REPO_NAME}\", \"private\": false}"
+ -d "{\"name\": \"${REPO_NAME}\", \"owner\": \"Xqhare\", \"private\": false, \"git_content\": true}"
 
 # Clone it
 cd "$HOME/Adytum/Programming/rust/"
-git clone "git@serverle:2222/Xqhare/${REPO_NAME}.git"
+git clone "ssh://git@serverle:2222/Xqhare/${REPO_NAME}.git"
 cd "${REPO_NAME}"
 
 # init.sh runs automatically upon enter
