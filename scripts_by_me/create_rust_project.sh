@@ -3,7 +3,7 @@
 set -e
 
 # 1. Gather Information
-read -p "Project/Deity Name (e.g., Hera): " NAME
+read -p "Project/Deity Name (e.g., Hera (First letter in uppercase please!)): " NAME
 read -p "Project type (Library [l], Executable [b]): " TYPE
 
 INIT_SCRIPT="$HOME/Adytum/Programming/bash/scripts_by_me/init_gitea_repo.sh"
