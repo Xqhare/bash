@@ -12,7 +12,7 @@ if [[ -z $COMMIT_MESSAGE ]]; then
 fi
 
 
-cd rust-template-bin && git adcta "$COMMIT_MESSAGE" && g ps
-cd ../rust-template-lib && git adcta "$COMMIT_MESSAGE" && g ps
+cd rust-template-bin && git adcta "$COMMIT_MESSAGE" && g sh
+cd ../rust-template-lib && git adcta "$COMMIT_MESSAGE" && g sh
 
 exit 0
